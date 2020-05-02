@@ -89,4 +89,33 @@ let friend = prompt ('Enter the name of your friend')
 console.log (friend)
 //returns Oxana
 
+//The next was done after the time was out
 
+switch (friend) {
+  case 'Oxana' : {
+    console.log ('a');
+    break
+  }
+  case 'Yura': {
+    console.log ('b')
+    break
+  }
+  default :{
+    console.log ('c')
+    break
+  }
+}
+// returns a
+
+let friend = prompt ('Enter the name of your friend')
+//enter 'Yura'
+
+if (friend ==='Oxana') {
+  console.log ('a')
+} else if
+  (friend === 'Yura') {
+    console.log ('b')
+} else {
+  console.log ('c')
+}
+//console returns c
