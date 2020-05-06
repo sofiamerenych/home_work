@@ -3,10 +3,21 @@
 
 let a = 0
 
-while (a<10) {
-    console.log (a)
+while (a<=10) {
+    console.log ('a', a)
     ++a
 }
+
+let a = 0
+do {
+    console.log ('a', a)
+    ++a
+}
+while (a<=10)
+
+for (let a = 0; a <=10; a++) {
+    console.log ('a', a)
+}    
 
 // 2. Яке останнє значення буде виведено в консоль?
 // let i = 0;
@@ -15,6 +26,8 @@ while (a<10) {
 //   console.log(i);
 //   ++i;
 // }
+
+//цикл не спрацює, бо в умові і більше 10
 
 // 3. Яке останнє значення буде виведено в консоль?
 // let i = 0;
