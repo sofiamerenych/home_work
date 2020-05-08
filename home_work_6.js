@@ -30,7 +30,38 @@ let myHouse = {
 console.log (myHouse)
 
 for (let key in myHouse) {
-    console.log (key)
+    console.log (key, myHouse[key])
+}
+//я тут ще спробувала те саме зробити з об'єктом в об'єкті, перевіриш? консоль показує то шо треба, але раптом)
+let myHouse = {
+    floors: 2,
+    garage: 1,
+    kitchen: 1,
+    rooms: {
+        firstFloor: 2,
+        secondFloor: 3
+    }
+}
+
+for (let room in myHouse) {
+    console.log (room);
+    if (typeof myHouse[room] === 'object'){
+        for (let roomFloor in myHouse[room]) {
+            console.log (room, roomFloor)
+        }
+    }
+}
+
+//OR
+function showObjectKeys (arg1) {
+    for (let key in arg1) {
+        console.log (key);
+        if (typeof arg1[key] === 'object'){
+            for (let keyInner in arg1[key]) {
+                console.log (key, keyInner)
+          }
+      }
+  }
 }
 
 
@@ -67,6 +98,27 @@ console.log (letters.length);
 // 7. Створіть рекурсивну функцію для того, щоб вивести в консоль всі значення багатовимірного масиву
 
 // 8. Створіть рекурсивну функцію для того, щоб вивести в консоль всі ключі багатовимірного обєкту
+
+let myHouse = {
+    floors: 2,
+    garage: 1,
+    kitchen: 1,
+    rooms: {
+        firstFloor: {
+            mamaRoom: 1,
+            mishaRoom: 1   
+        }       
+    }
+}
+
+function showObjectKeys (arg1) {
+    for (let key in arg1) {
+        console.log (key);
+        if (typeof arg1[key] === 'object'){
+           showObjectKeys (arg1[key])
+        }
+    }
+}
 
 // 9. Створіть багатовимірний масив і присвойте його в змінну.
 // *Виведіть значення масиву в консоль.
