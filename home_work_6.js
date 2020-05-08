@@ -97,19 +97,20 @@ console.log (letters.length);
 
 // 7. Створіть рекурсивну функцію для того, щоб вивести в консоль всі значення багатовимірного масиву
 
-// 8. Створіть рекурсивну функцію для того, щоб вивести в консоль всі ключі багатовимірного обєкту
-
-let myHouse = {
-    floors: 2,
-    garage: 1,
-    kitchen: 1,
-    rooms: {
-        firstFloor: {
-            mamaRoom: 1,
-            mishaRoom: 1   
-        }       
+showArr (arg1) {
+    for (let i = 0; i < languages.length; i++) {
+        console.log (arg1[i])
+        if (Array.isArray (arg1[i])) {
+            showArr (arg1[i])
+        } 
     }
 }
+
+//я над цією функцією просиділа десь 2 години. проклинала все на світі. підбирала, пробувала, комбінувала - і о богі, воно запрацювало!!
+
+
+// 8. Створіть рекурсивну функцію для того, щоб вивести в консоль всі ключі багатовимірного обєкту
+
 
 function showObjectKeys (arg1) {
     for (let key in arg1) {
@@ -124,6 +125,28 @@ function showObjectKeys (arg1) {
 // *Виведіть значення масиву в консоль.
 // *Виведіть кожне значення масиву використовуючи функцію з завдання 7.
 
+let languages = ['hungarian', ['ukrainian', 'polish', 'slovakian'], ['german', 'norwegian', 'dutch', ['icelandic']],['french', 'italian', 'spanish']]
+typeof (languages)
+console.log (languages)
+
+showArr (languages)
+
 // 10. Створіть багатовимірний обєкт і присвойте його в змінну.
 // *Виведіть значення обєкт в консоль.
 // *Виведіть кожний ключ і його значення в консоль використовуючи функцію з завдання 8.
+
+let myHouse = {
+    floors: 2,
+    garage: 1,
+    kitchen: 1,
+    rooms: {
+        firstFloor: {
+            mamaRoom: 1,
+            mishaRoom: 1   
+        }       
+    }
+}
+console.log (myHouse)
+typeof (myHouse)
+
+showObjectKeys (myHouse)
