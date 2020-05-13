@@ -48,7 +48,7 @@ function showArr (arg1) {
 // 7. Створіть функцію і виведіть в консоль всі аргументи які були їй передані.
 
 function func2 (a, b, c, d, e){
-    console.log (arguments, typeof (arguments))
+    console.log (arguments)
 }
 
 func2 (func2, 'what', false, null, 3)
