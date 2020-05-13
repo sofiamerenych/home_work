@@ -1,5 +1,8 @@
 // 1. Створіть функцію за допомогою "function expression".
 
+function greeting (name) {
+    console.log ('Hello, ' + name)
+}
 
 let name = 'Simon'
 greeting ()
@@ -18,14 +21,14 @@ greetingArrow (name2)
 // 4. Створіть функцію яка приймає два аргументи, перший це обєкт другий це колбек.
 
 function hi (obj, cb) {
-  alert ('Hello')
+  console.log ('Hello')
 }
 
 function bye (){
-   alert ('Bye-bye') 
+   console.log ('Bye-bye') 
 }
 
-hi ({}, bye())
+hi ({}, bye)
 
 // 5. Створіть рекурсивну функцію.
 let arr = ['green', ['yellow', 'red', ['black', 'white']], 'purple', ['orange', 'blue']]
