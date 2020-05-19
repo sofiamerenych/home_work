@@ -18,8 +18,6 @@ if (button) {
     button.onclick = clicked;
 }
 
-//this function didn't work when I tried to do it through classname, but when I changed to ID, it worked
-
 const myInput = document.getElementById('input');
 
 const entered = (event) => {
