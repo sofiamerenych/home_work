@@ -56,7 +56,7 @@ class User2 extends User1 {
 
 
 // 9. Створіть новий eлемент за допомогою конструктору з попереднього завдання і виведіть імя та прізвище або дату народження.
-misha = new User2 ('Misha', 'Hrab', 29, ['Ukrainian', 'Russian'])
+let misha = new User2 ('Misha', 'Hrab', 29, ['Ukrainian', 'Russian'])
 
 misha.getBirthdate = new Date (1990, 07, 16)
 
